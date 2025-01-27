@@ -18,7 +18,7 @@ const projects: Project[] = [
   {
     title: "PromptVision",
     description: "Interactive educational platform with AI-powered features including real-time chat interface, AI image generation, and multiple AI tool integrations. Features secure authentication and a modern, responsive UI.",
-    image: "/promptvision.png",
+    image: "/PromptVision.png",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Clerk Auth", "Cohere API", "Stability AI", "Framer Motion", "Shadcn/ui"],
     githubLink: "https://github.com/hxbeeb11/PromptVision",
     demoLink: "https://prompt-vision.vercel.app/",
