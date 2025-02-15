@@ -37,7 +37,7 @@ const Hero = () => {
 
     script.onload = () => {
       new window.Typed("#typed-text", {
-        strings: ["Web Developer", "Machine Learning Engineer"],
+        strings: ["an AI Engineer", "a Web Developer", "a Freelancer"],
         typeSpeed: 50,
         backSpeed: 50,
         loop: true,
@@ -148,7 +148,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-2xl sm:text-3xl md:text-4xl mb-12"
         >
-          I&apos;m a <span id="typed-text" className="text-blue-500"></span>
+          I&apos;m  <span id="typed-text" className="text-blue-500"></span>
         </motion.h2>
 
         <motion.div
