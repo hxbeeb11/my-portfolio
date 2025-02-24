@@ -28,6 +28,14 @@ const experiences: ExperienceItem[] = [
     description: "Gained hands-on experience in data analysis, visualization, and machine learning using Python libraries like NumPy, Pandas, and Matplotlib, while exploring algorithms such as KNN and regression for predictive modeling.",
     type: "work",
     side: "right"
+  },
+  {
+    title: "Machine Learning Intern",
+    organization: "GGS Information Services India Pvt. Ltd.",
+    duration: "Dec 2024 - Jan 2025",
+    description: "Worked on the '3D Optimization' project, developing a system that converts engineering diagrams into fully-fledged 3D figures with precise measurements, and implemented a text-to-3D model generation system using machine learning techniques to enhance efficiency and accuracy in 3D modeling.",
+    type: "work",
+    side: "left"
   }
 ]
 
