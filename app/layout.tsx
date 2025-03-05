@@ -8,7 +8,7 @@ export const metadata = {
   title: "Habeeb - Portfolio",
   description: "Professional portfolio showcasing my projects and skills",
   icons: {
-    icon: './favicon.svg',
+    icon: '/cool.png',
   },
 }
 
