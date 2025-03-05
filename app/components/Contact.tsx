@@ -61,7 +61,7 @@ const Contact = () => {
     },
     {
       name: "Email",
-      url: "mailto:mohammedhabeeb1108@gmail.com",
+      url: "mailto:mohdhabeeburrahman11@gmail.com",
       icon: <FiMail className="text-2xl" />,
     },
   ]
