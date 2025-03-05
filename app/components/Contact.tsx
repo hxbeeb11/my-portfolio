@@ -51,7 +51,7 @@ const Contact = () => {
   const socialLinks = [
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/in/mohammed-habeeb-ur-rahman-b2b365249/",
+      url: "https://www.linkedin.com/in/mohdhabeeburrahman/",
       icon: <FaLinkedin className="text-2xl" />,
     },
     {
