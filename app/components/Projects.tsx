@@ -10,11 +10,18 @@ interface Project {
   description: string
   image: string
   techStack: string[]
-  githubLink: string
+  githubLink?: string
   demoLink: string
 }
 
 const projects: Project[] = [
+  {
+    title: "WebMind",
+    description: "A modern, AI-powered web search interface that combines large language models with real-time web search to provide comprehensive, up-to-date answers to user queries. Features smart context understanding for optimized search queries and curates insights from multiple web sources.",
+    image: "/WebMind.png",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "LangChain", "OpenAI API", "Web Search API", "Vercel AI SDK", "Shadcn/ui"],
+    demoLink: "https://webmind-seven.vercel.app/",
+  },
   {
     title: "PromptVision",
     description: "Interactive educational platform with AI-powered features including real-time chat interface, AI image generation, and multiple AI tool integrations. Features secure authentication and a modern, responsive UI.",
@@ -129,18 +136,20 @@ const Projects = () => {
                   </div>
 
                   <div className="flex gap-4">
-                    <motion.a
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 
-                      border border-gray-700 hover:border-blue-500/50 transition-all duration-300"
-                    >
-                      <FaGithub className="text-xl" />
-                      <span>Code</span>
-                    </motion.a>
+                    {project.githubLink && (
+                      <motion.a
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        href={project.githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 
+                        border border-gray-700 hover:border-blue-500/50 transition-all duration-300"
+                      >
+                        <FaGithub className="text-xl" />
+                        <span>Code</span>
+                      </motion.a>
+                    )}
                     <motion.a
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}

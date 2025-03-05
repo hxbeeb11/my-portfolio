@@ -5,38 +5,71 @@ import {
   SiNextdotjs, SiReact, SiTailwindcss, SiTypescript, 
   SiPython, SiTensorflow, SiScikitlearn, SiPandas,
   SiNumpy, SiJavascript, SiHtml5, SiCss3,
-  SiGit, SiGithub, SiVercel, SiFirebase
+  SiGit, SiGithub, SiVercel, SiFirebase,
+  SiNodedotjs, SiVite, SiBootstrap, SiFlask,
+  SiC, SiPytorch, SiJupyter, SiMongodb,
+  SiMysql, SiPostgresql, SiSupabase, 
+  SiGooglecolab, SiR, SiHuggingface
 } from "react-icons/si"
+import { BiLogoVisualStudio } from "react-icons/bi"
+import { FaJava } from "react-icons/fa"
 
 interface Skill {
   name: string
   icon: React.ReactNode
-  category: "frontend" | "backend" | "ml" | "tools"
+  category: "frontend" | "backend" | "ml" | "databases" | "tools"
 }
 
 const skills: Skill[] = [
+  // Frontend
   { name: "Next.js", icon: <SiNextdotjs />, category: "frontend" },
   { name: "React", icon: <SiReact />, category: "frontend" },
-  { name: "Tailwind CSS", icon: <SiTailwindcss />, category: "frontend" },
   { name: "TypeScript", icon: <SiTypescript />, category: "frontend" },
   { name: "JavaScript", icon: <SiJavascript />, category: "frontend" },
   { name: "HTML5", icon: <SiHtml5 />, category: "frontend" },
   { name: "CSS3", icon: <SiCss3 />, category: "frontend" },
-  { name: "Python", icon: <SiPython />, category: "ml" },
+  { name: "Tailwind CSS", icon: <SiTailwindcss />, category: "frontend" },
+  { name: "Bootstrap", icon: <SiBootstrap />, category: "frontend" },
+  { name: "Vite", icon: <SiVite />, category: "frontend" },
+
+  // Backend & Languages
+  { name: "Python", icon: <SiPython />, category: "backend" },
+  { name: "Java", icon: <FaJava />, category: "backend" },
+  { name: "Node.js", icon: <SiNodedotjs />, category: "backend" },
+  { name: "Flask", icon: <SiFlask />, category: "backend" },
+  { name: "C", icon: <SiC />, category: "backend" },
+  { name: "R", icon: <SiR />, category: "backend" },
+
+  // Machine Learning
   { name: "TensorFlow", icon: <SiTensorflow />, category: "ml" },
+  { name: "PyTorch", icon: <SiPytorch />, category: "ml" },
   { name: "Scikit-learn", icon: <SiScikitlearn />, category: "ml" },
   { name: "Pandas", icon: <SiPandas />, category: "ml" },
   { name: "NumPy", icon: <SiNumpy />, category: "ml" },
+  { name: "Hugging Face", icon: <SiHuggingface />, category: "ml" },
+
+  // Databases
+  { name: "MongoDB", icon: <SiMongodb />, category: "databases" },
+  { name: "MySQL", icon: <SiMysql />, category: "databases" },
+  { name: "PostgreSQL", icon: <SiPostgresql />, category: "databases" },
+  { name: "Supabase", icon: <SiSupabase />, category: "databases" },
+  { name: "Firebase", icon: <SiFirebase />, category: "databases" },
+
+  // Development Tools
   { name: "Git", icon: <SiGit />, category: "tools" },
   { name: "GitHub", icon: <SiGithub />, category: "tools" },
+  { name: "VS Code", icon: <BiLogoVisualStudio /> , category: "tools" },
+  { name: "Jupyter", icon: <SiJupyter />, category: "tools" },
+  { name: "Google Colab", icon: <SiGooglecolab />, category: "tools" },
   { name: "Vercel", icon: <SiVercel />, category: "tools" },
-  { name: "Firebase", icon: <SiFirebase />, category: "tools" },
 ]
 
 const categories = [
   { id: "frontend", name: "Frontend Development" },
-  { id: "ml", name: "Machine Learning" },
-  { id: "tools", name: "Tools & Platforms" },
+  { id: "backend", name: "Backend & Languages" },
+  { id: "ml", name: "Machine Learning & AI" },
+  { id: "databases", name: "Databases" },
+  { id: "tools", name: "Development Tools" },
 ]
 
 const Skills = () => {
