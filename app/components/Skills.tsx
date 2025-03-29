@@ -9,7 +9,8 @@ import {
   SiNodedotjs, SiVite, SiBootstrap, SiFlask,
   SiC, SiPytorch, SiJupyter, SiMongodb,
   SiMysql, SiPostgresql, SiSupabase, 
-  SiGooglecolab, SiR, SiHuggingface
+  SiGooglecolab, SiR, SiHuggingface,
+  SiRender, SiRailway
 } from "react-icons/si"
 import { BiLogoVisualStudio } from "react-icons/bi"
 import { FaJava } from "react-icons/fa"
@@ -62,6 +63,8 @@ const skills: Skill[] = [
   { name: "Jupyter", icon: <SiJupyter />, category: "tools" },
   { name: "Google Colab", icon: <SiGooglecolab />, category: "tools" },
   { name: "Vercel", icon: <SiVercel />, category: "tools" },
+  { name: "Render", icon: <SiRender />, category: "tools" },
+  { name: "Railway", icon: <SiRailway />, category: "tools" },
 ]
 
 const categories = [

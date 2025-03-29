@@ -51,8 +51,8 @@ const Hero = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a")
-    link.href = "/Habeeb.pdf"
-    link.download = "Habeeb.pdf"
+    link.href = "/Habeeb_CV.pdf"
+    link.download = "Habeeb_CV.pdf"
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
