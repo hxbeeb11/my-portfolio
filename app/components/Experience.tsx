@@ -31,9 +31,9 @@ const experiences: ExperienceItem[] = [
   },
   {
     title: "Machine Learning Intern",
-    organization: "GGS Information Services India Pvt. Ltd.",
+    organization: "GGS INFORMATION SERVICES",
     duration: "Dec 2024 - Jan 2025",
-    description: "Worked on the '3D Optimization' project, developing a system that converts engineering diagrams into fully-fledged 3D figures with precise measurements, and implemented a text-to-3D model generation system using machine learning techniques to enhance efficiency and accuracy in 3D modeling.",
+    description: "Contributed to the '3D Optimization' project converting 2D engineering diagrams into precise 3D models; implemented a 2D image-to-3D model generation system.",
     type: "work",
     side: "left"
   }

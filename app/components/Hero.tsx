@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useCallback } from "react"
+import { useEffect, useCallback, useRef } from "react"
 import { motion } from "framer-motion"
 import Particles from "react-particles"
 import { loadSlim } from "tsparticles-slim"
@@ -29,23 +29,38 @@ const Hero = () => {
     await loadSlim(engine)
   }, [])
 
-  useEffect(() => {
-    const script = document.createElement("script")
-    script.src = "https://cdn.jsdelivr.net/npm/typed.js@2.0.12"
-    script.async = true
-    document.body.appendChild(script)
+  const typedRef = useRef<unknown | null>(null)
 
-    script.onload = () => {
-      new window.Typed("#typed-text", {
-        strings: ["an AI Engineer", "a Web Developer", "a Freelancer"],
+  useEffect(() => {
+    const createTyped = () => {
+      typedRef.current = new window.Typed("#typed-text", {
+        strings: ["an AI/ML Engineer", "a Full-Stack Developer", "a Cloud/DevOps Engineer"],
         typeSpeed: 50,
         backSpeed: 50,
         loop: true,
       })
     }
 
+    let script: HTMLScriptElement | null = null
+
+    if (window.Typed) {
+      createTyped()
+    } else {
+      script = document.createElement("script")
+      script.src = "https://cdn.jsdelivr.net/npm/typed.js@2.0.12"
+      script.async = true
+      document.body.appendChild(script)
+      script.onload = () => createTyped()
+    }
+
     return () => {
-      document.body.removeChild(script)
+      // destroy existing instance to avoid stale titles
+      // @ts-expect-error destroy exists at runtime
+      typedRef.current?.destroy?.()
+      typedRef.current = null
+      if (script) {
+        document.body.removeChild(script)
+      }
     }
   }, [])
 

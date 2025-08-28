@@ -1,78 +1,67 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { 
-  SiNextdotjs, SiReact, SiTailwindcss, SiTypescript, 
-  SiPython, SiTensorflow, SiScikitlearn, SiPandas,
-  SiNumpy, SiJavascript, SiHtml5, SiCss3,
-  SiGit, SiGithub, SiVercel, SiFirebase,
+import {
+  SiNextdotjs, SiReact, SiTailwindcss, SiTypescript,
+  SiPython, SiPandas, SiNumpy, SiJavascript, SiHtml5, SiCss3,
+  SiGit, SiGithub, SiFirebase,
   SiNodedotjs, SiVite, SiBootstrap, SiFlask,
-  SiC, SiPytorch, SiJupyter, SiMongodb,
-  SiMysql, SiPostgresql, SiSupabase, 
-  SiGooglecolab, SiR, SiHuggingface,
-  SiRender, SiRailway
+  SiC, SiMongodb,
+  SiPostgresql, SiSupabase,
+  SiLinux, SiDocker, SiDjango, SiCreatereactapp
 } from "react-icons/si"
-import { BiLogoVisualStudio } from "react-icons/bi"
-import { FaJava } from "react-icons/fa"
+import { FaJava, FaAws } from "react-icons/fa"
 
 interface Skill {
   name: string
   icon: React.ReactNode
-  category: "frontend" | "backend" | "ml" | "databases" | "tools"
+  category: "frontend" | "frameworks" | "languages" | "devops" | "databases"
 }
 
 const skills: Skill[] = [
-  // Frontend
-  { name: "Next.js", icon: <SiNextdotjs />, category: "frontend" },
-  { name: "React", icon: <SiReact />, category: "frontend" },
-  { name: "TypeScript", icon: <SiTypescript />, category: "frontend" },
+  // Front-End
+  { name: "HTML", icon: <SiHtml5 />, category: "frontend" },
+  { name: "CSS", icon: <SiCss3 />, category: "frontend" },
   { name: "JavaScript", icon: <SiJavascript />, category: "frontend" },
-  { name: "HTML5", icon: <SiHtml5 />, category: "frontend" },
-  { name: "CSS3", icon: <SiCss3 />, category: "frontend" },
-  { name: "Tailwind CSS", icon: <SiTailwindcss />, category: "frontend" },
-  { name: "Bootstrap", icon: <SiBootstrap />, category: "frontend" },
-  { name: "Vite", icon: <SiVite />, category: "frontend" },
+  { name: "TypeScript", icon: <SiTypescript />, category: "frontend" },
+  { name: "React.js", icon: <SiReact />, category: "frontend" },
 
-  // Backend & Languages
-  { name: "Python", icon: <SiPython />, category: "backend" },
-  { name: "Java", icon: <FaJava />, category: "backend" },
-  { name: "Node.js", icon: <SiNodedotjs />, category: "backend" },
-  { name: "Flask", icon: <SiFlask />, category: "backend" },
-  { name: "C", icon: <SiC />, category: "backend" },
-  { name: "R", icon: <SiR />, category: "backend" },
+  // Frameworks & Libraries
+  { name: "Node.js", icon: <SiNodedotjs />, category: "frameworks" },
+  { name: "Next.js", icon: <SiNextdotjs />, category: "frameworks" },
+  { name: "Vite", icon: <SiVite />, category: "frameworks" },
+  { name: "Tailwind CSS", icon: <SiTailwindcss />, category: "frameworks" },
+  { name: "Bootstrap", icon: <SiBootstrap />, category: "frameworks" },
+  { name: "Create React App", icon: <SiCreatereactapp />, category: "frameworks" },
+  { name: "Flask", icon: <SiFlask />, category: "frameworks" },
+  { name: "Django", icon: <SiDjango />, category: "frameworks" },
 
-  // Machine Learning
-  { name: "TensorFlow", icon: <SiTensorflow />, category: "ml" },
-  { name: "PyTorch", icon: <SiPytorch />, category: "ml" },
-  { name: "Scikit-learn", icon: <SiScikitlearn />, category: "ml" },
-  { name: "Pandas", icon: <SiPandas />, category: "ml" },
-  { name: "NumPy", icon: <SiNumpy />, category: "ml" },
-  { name: "Hugging Face", icon: <SiHuggingface />, category: "ml" },
+  // Programming Languages
+  { name: "Python", icon: <SiPython />, category: "languages" },
+  { name: "Java", icon: <FaJava />, category: "languages" },
+  { name: "C", icon: <SiC />, category: "languages" },
+  { name: "JavaScript", icon: <SiJavascript />, category: "languages" },
+
+  // DevOps
+  { name: "Linux", icon: <SiLinux />, category: "devops" },
+  { name: "AWS", icon: <FaAws />, category: "devops" },
+  { name: "Docker", icon: <SiDocker />, category: "devops" },
+  { name: "Git", icon: <SiGit />, category: "devops" },
+  { name: "GitHub", icon: <SiGithub />, category: "devops" },
 
   // Databases
   { name: "MongoDB", icon: <SiMongodb />, category: "databases" },
-  { name: "MySQL", icon: <SiMysql />, category: "databases" },
   { name: "PostgreSQL", icon: <SiPostgresql />, category: "databases" },
   { name: "Supabase", icon: <SiSupabase />, category: "databases" },
   { name: "Firebase", icon: <SiFirebase />, category: "databases" },
-
-  // Development Tools
-  { name: "Git", icon: <SiGit />, category: "tools" },
-  { name: "GitHub", icon: <SiGithub />, category: "tools" },
-  { name: "VS Code", icon: <BiLogoVisualStudio /> , category: "tools" },
-  { name: "Jupyter", icon: <SiJupyter />, category: "tools" },
-  { name: "Google Colab", icon: <SiGooglecolab />, category: "tools" },
-  { name: "Vercel", icon: <SiVercel />, category: "tools" },
-  { name: "Render", icon: <SiRender />, category: "tools" },
-  { name: "Railway", icon: <SiRailway />, category: "tools" },
 ]
 
 const categories = [
-  { id: "frontend", name: "Frontend Development" },
-  { id: "backend", name: "Backend & Languages" },
-  { id: "ml", name: "Machine Learning & AI" },
+  { id: "frontend", name: "Front-End" },
+  { id: "frameworks", name: "Frameworks & Libraries" },
+  { id: "languages", name: "Programming Languages" },
+  { id: "devops", name: "DevOps" },
   { id: "databases", name: "Databases" },
-  { id: "tools", name: "Development Tools" },
 ]
 
 const Skills = () => {
