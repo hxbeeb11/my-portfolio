@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import {
   SiNextdotjs, SiReact, SiTailwindcss, SiTypescript,
-  SiPython, SiPandas, SiNumpy, SiJavascript, SiHtml5, SiCss3,
+  SiPython, SiJavascript, SiHtml5, SiCss3,
   SiGit, SiGithub, SiFirebase,
   SiNodedotjs, SiVite, SiBootstrap, SiFlask,
   SiC, SiMongodb,
